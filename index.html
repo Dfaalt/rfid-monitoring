@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RFID Management</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>RFID Database Management</h1>
+
+      <div class="table-wrapper">
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tag</th>
+              <th>Created At</th>
+              <th>Updated At</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="button-group">
+        <div class="btn-refresh">
+          <button id="refresh-data">
+            Refresh Data<i class="bx bx-refresh"></i>
+          </button>
+        </div>
+
+        <div class="btn-del-all">
+          <button id="delete-all">Delete All Data</button>
+        </div>
+      </div>
+
+      <h2>Add New Data</h2>
+      <form id="add-form">
+        <input type="text" id="new-tag" placeholder="Enter tag" />
+        <button type="submit">Add</button>
+      </form>
+
+      <h2>Last Data</h2>
+      <button id="get-last-data">Get Last Data</button>
+      <div id="last-data"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+      <p>&copy; 2024 RFID Dfaalt Database. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
