@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const apiUrl = "https://localhost/Rest_API_RFID/api";
+  const apiUrl = "https://rfid-project201.000webhostapp.com/api";
   const dataTable = document.querySelector("#data-table tbody");
   const refreshDataButton = document.getElementById("refresh-data");
   const deleteAllButton = document.getElementById("delete-all");
