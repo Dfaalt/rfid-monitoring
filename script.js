@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const apiUrl = "https://rfid-project201.000webhostapp.com/api";
+  const apiUrl = "https://localhost/Rest_API_RFID/api";
   const dataTable = document.querySelector("#data-table tbody");
   const refreshDataButton = document.getElementById("refresh-data");
   const deleteAllButton = document.getElementById("delete-all");
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to delete data by ID
   window.deleteData = function (id) {
     fetch(`${apiUrl}/delete_data.php?id=${id}`, {
-      method: "DELETE",
+      method: "GET",
     })
       .then((response) => {
         if (!response.ok) {
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
   deleteAllButton.addEventListener("click", function () {
     if (confirm("Are you sure you want to delete all data?")) {
       fetch(`${apiUrl}/deleteAll.php?delete_all`, {
-        method: "DELETE",
+        method: "GET",
       })
         .then((response) => {
           if (!response.ok) {
